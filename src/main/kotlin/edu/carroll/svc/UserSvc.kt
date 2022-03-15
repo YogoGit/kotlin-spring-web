@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service
 class UserSvc(val db: UserRepo) {
     fun fetchAllUsers(): List<User> = db.fetchAllUsers()
 
-    fun save(user: User) {
-        db.save(user)
+    fun save(user: User) : Boolean {
+        return db.save(user) != null;
     }
 }
