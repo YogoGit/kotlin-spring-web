@@ -1,4 +1,4 @@
-package edu.carroll.cs495
+package edu.carroll.ctrl
 
 import edu.carroll.svc.UserSvc
 import org.springframework.stereotype.Controller
