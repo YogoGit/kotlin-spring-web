@@ -24,5 +24,5 @@ data class User(
     var active: Boolean,
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
-    var emails: Set<Email>?
+    var emails: Set<Email>? = null
 )
