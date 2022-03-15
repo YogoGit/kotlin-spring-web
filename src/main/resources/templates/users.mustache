@@ -1,7 +1,14 @@
 {{> header}}
-<div>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Active</th>
+  </tr>
   {{#users}}
-  <p><h3>{{name}}&nbsp;:&nbsp;{{active}}</h3></p>
+  <tr>
+    <th>{{name}}</th>
+    <th>{{active}}</th>
+  </tr>
   {{/users}}
-</div>
+</table>
 {{> footer}}
