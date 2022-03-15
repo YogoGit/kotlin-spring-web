@@ -5,16 +5,11 @@ import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.ui.set
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestMapping
 
 @Controller
-class HtmlController(val userSvc: UserSvc) {
-
-    @GetMapping("/")
-    fun index(model: Model): String {
-        model["title"] = "CS495"
-        return "index"
-    }
-
+@RequestMapping("/user")
+class UserController(val userSvc: UserSvc) {
     @GetMapping("/all")
     fun getUsers(model: Model): String {
         model["title"] = "All Users"
